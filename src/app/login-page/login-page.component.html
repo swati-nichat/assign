@@ -1,0 +1,20 @@
+<h1> </h1>
+<div id="backg">
+  <mat-card id="card">
+    <h3 id=h3>Login Page</h3>
+    <form class="login-form" [formGroup]="profileForm">
+
+
+      <mat-form-field class="login-full-width">
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" placeholder="Email" value=" " formControlName="emailaddress" required>
+      </mat-form-field>
+
+      <mat-form-field class="login-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="password" value="" formControlName="password" required>
+      </mat-form-field>
+      <button mat-stroked-button id=loginbutton (click)=validate() style="align-content: center;">Login</button>
+    </form>
+  </mat-card>
+</div>

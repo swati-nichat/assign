@@ -1,0 +1,40 @@
+.login-form {
+    min-width: 150px;
+    max-width: 75%;
+    width: 70%;
+    text-align:center;
+    margin-top: auto;
+  }
+ 
+  .login-full-width {
+    margin-left: 20%;
+    width: 100%;
+    position: relative;
+    margin-top: 5%;
+    
+  }
+  #card{
+    width: 55%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10%;
+    background-image:
+    linear-gradient(
+      to bottom right,
+      #ffcccc
+      ,#ffffcc
+    );
+  }
+  #h3{
+      color:darkred;
+
+  }
+  #loginbutton{
+      background-color: snow;
+      color:darkred;
+      background-color:snow;
+      margin-left: 40%;
+      margin-top: 5%;
+  }
+ 

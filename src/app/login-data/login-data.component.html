@@ -1,0 +1,59 @@
+
+<div >
+  <mat-toolbar >
+<div class="search" >
+  <span>
+    <mat-form-field>
+      <input matInput type="text"  [(ngModel)]= "searchTerm" placeholder="search ">
+    </mat-form-field>
+  </span>
+  </div>
+  <span>
+    <div class="menu">
+<button mat-button [matMenuTriggerFor]="menu" >Logout</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="Home()">Home</button>
+  <button mat-menu-item (click)="logout()">Logout</button>
+</mat-menu>
+</div>
+</span>
+</mat-toolbar>
+</div>
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+    (scrolled)="getData()" [scrollWindow]="true">
+    <div class="cards">
+      
+        
+        <!-- <div *ngFor="let joke of jokes " > -->
+      
+            <!-- single post card -->
+            <mat-grid-list cols="3" rowHeight="200px">
+            <div>
+                
+                <mat-grid-tile  *ngFor="let joke of jokes| filter:searchTerm"> 
+                <mat-card class="example-card">
+                    <div>
+                        
+                        <mat-card-header >
+                            <mat-card-title>Id: {{joke.id}} </mat-card-title>
+                            <mat-card-subtitle class="example-card">
+                              Type:  {{joke.type}}</mat-card-subtitle>
+                        </mat-card-header>
+                    </div>
+                    <mat-card-content>Setup:  {{joke.setup}}  
+                      <mat-card-content>
+                        Punchline:  {{joke.punchline}}
+                    </mat-card-content>
+                    </mat-card-content>
+                    <!-- //<button mat-button class="button">Click me!</button> -->
+                  </mat-card>
+             </mat-grid-tile>
+            </div>
+        </mat-grid-list> 
+        <!-- </div> -->
+      
+        
+            
+    <!-- single post card end -->
+
+</div>
